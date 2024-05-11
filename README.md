@@ -7,3 +7,4 @@ SQL injection is a web security vulnerability. In some cases, it allows an attac
 
 As a result, ordinary users can access the database system. Edit, delete or query the system's database data. Causes serious loss to the ownership company
 
+![SQLi](https://github.com/DOMBNC/SQLi/assets/101182846/c1871951-83d2-4ed4-8ed7-e5e9f9de2145)
