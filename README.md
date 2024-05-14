@@ -8,6 +8,7 @@ SQL injection has 3 main types:
 * In-band SQLi
 * Inferential SQLi (Blind SQLi)
 * Out-of-band SQLi
+
 ![SQL_Injection_Type](https://github.com/DOMBNC/SQLi/assets/101182846/7eae2824-a4ab-46c0-8999-a73204ce1e7e)
 
 In-band SQLi is the most common form of attack and is also the easiest to exploit SQL Injection vulnerabilities
